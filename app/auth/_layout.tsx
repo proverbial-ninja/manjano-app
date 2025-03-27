@@ -8,7 +8,7 @@ import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
-export default function TabLayout() {
+export default function DashTabLayout() {
   const colorScheme = useColorScheme();
 
   return (
@@ -29,14 +29,14 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Login',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="lock" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="register"
         options={{
-          title: 'Explore',
+          title: 'Registration',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
