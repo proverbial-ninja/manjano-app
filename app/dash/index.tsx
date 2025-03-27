@@ -3,7 +3,12 @@ import { View, Text, TouchableOpacity, StyleSheet, FlatList, TextInput, ScrollVi
 import { Picker } from "@react-native-picker/picker";
 import { authClient } from "../auth-client";
 import { Link, useFocusEffect } from "expo-router";
+import { LogBox } from "react-native";
 
+// Ignore specific warnings
+LogBox.ignoreLogs([
+  'VirtualizedLists should never be nested inside plain ScrollViews', // Suppress this warning
+]);
 const EntryListScreen = () => {
   const [entries, setEntries] = useState<any[]>([]);
   const [filteredEntries, setFilteredEntries] = useState<any[]>([]);
@@ -140,6 +145,7 @@ const EntryListScreen = () => {
         <Text style={styles.stat}>Unique Tags: {uniqueTags.size}</Text>
       </View>
 
+      {/* FlatList for Entries */}
       <FlatList
         data={filteredEntries}
         keyExtractor={(item) => item.id.toString()}
