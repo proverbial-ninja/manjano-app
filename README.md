@@ -10,7 +10,15 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npm install
    ```
 
-2. Start the app
+2. Set environment variable
+
+   In your `.env` file, add the following line:
+
+   ```plaintext
+   EXPO_PUBLIC_API_URL=https://manjano.vercel.app
+   ```
+
+3. Start the app
 
    ```bash
     npx expo start
@@ -24,15 +32,3 @@ In the output, you'll find options to open the app in a
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-3. Set environment variable
-
-   In your `.env` file, add the following line:
-
-   ```plaintext
-   EXPO_PUBLIC_API_URL=https://manjano.vercel.app
-   ```
